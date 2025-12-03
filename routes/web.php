@@ -12,10 +12,11 @@ Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit')
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // ---------- Customer Pages ----------
-Route::get('/customer/new', fn() => view('customer.new'))->name('customer.new');
-// Route::get('/customer/manager', fn() => view('customer.manager'))->name('customer.manager');
-Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
+Route::get('/customer/customers/new', fn() => view('customer.customers.new'))->name('customer.customers.new');
 Route::post('/customers/save', [CustomerController::class, 'save'])->name('customers.save');});
+// ---------- Customer Pages manager ----------
+Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
+
 
 
 // Reports Sections Start--------------------------------------------

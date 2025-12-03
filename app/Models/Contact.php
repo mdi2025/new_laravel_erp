@@ -172,4 +172,8 @@ class Contact extends Model
     {
         return $query->where('inactive', '1');
     }
+    public function addresses()
+{
+    return $this->hasMany(AddressBook::class, 'ref_id', 'id');
+}
 }

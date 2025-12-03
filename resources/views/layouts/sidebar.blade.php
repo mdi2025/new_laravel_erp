@@ -92,7 +92,7 @@
 
             <!-- Customer Submenu Items -->
             <div x-show="customerSubmenu" x-collapse class="ml-6 mt-1 space-y-1">
-                <a href="{{ route('customer.new') }}" @click="closeMobile()"
+                <a href="{{ route('customer.customers.new', ['type' => 'c']) }}" @click="closeMobile()"
                    class="flex items-center space-x-3 px-4 py-2.5 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition">
                     <i class="fas fa-user-plus w-4 h-4"></i>
                     <span>New Customer</span>
